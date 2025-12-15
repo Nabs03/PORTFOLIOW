@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="#home" title="Home">
+                    <img src="wp.jpg" alt="WP Logo" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; vertical-align: middle;" />
+                </a>
+                <div class="nav-brand logo-wp">Website Portfolio</div>
+            </div>
+            <button id="dark-mode-toggle" class="dark-mode-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <section id="profile" class="profile">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="NABS.jpeg" alt="Noel Jr. B. Navarro" />
+                </div>
+                <div class="profile-info">
+                    <div class="profile-bio">
+                        <div class="profile-name">Noel Jr. B. Navarro</div>
+                        <div class="profile-subtitle">BSIT STUDENT FROM HOLY CROSS OF DAVAO COLLEGE</div>
+                        <p>Welcome to my profile! This is my personal portfolio where I share my Diary and Experiences during our Educational Tour in Cebu City and Bohol City!</p>
+                        <div class="profile-socials">
+                            <a href="https://github.com/your-username" target="_blank" class="social-icon" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://your-project-name.vercel.app" target="_blank" class="social-icon" aria-label="Live Website on Vercel">
+                                <i class="fas fa-bolt"></i> Vercel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile-nav" class="profile-nav">
+        <div class="profile-nav-container">
+            <button class="nav-tab active">
+                <i class="fas fa-book"></i>
+                <span>JOURNAL</span>
+            </button>
+            <button class="nav-tab">
+                <i class="fas fa-tv"></i>
+                <span>POSTS</span>
+            </button>
+            <button class="nav-tab">
+                <i class="fas fa-bookmark"></i>
+                <span>SAVED</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section id="journal-grid" class="posts-grid active">
+        <div class="journal-container">
+            <div class="journal-entry">
+                <h3 class="journal-title">Day 1: Cebu Arrival</h3>
+                <p class="journal-date">March 15, 2024</p>
+                <p class="journal-body">Our exciting journey begins! Arrived in Cebu and ready for adventure. The energy of the city is palpable, and everyone is excited for the company visits and cultural experiences ahead. Settled into the hotel and prepared for a big day tomorrow.</p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">Day 2: Bohol Adventure</h3>
+                <p class="journal-date">March 16, 2024</p>
+                <p class="journal-body">Explored the beautiful island of Bohol today. The ferry ride was an experience in itself. We saw the iconic Chocolate Hills and were amazed by the unique landscape. It's incredible to see something in person that you've only seen in textbooks.</p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">Day 3: Tarsiers and River Cruise</h3>
+                <p class="journal-date">March 17, 2024</p>
+                <p class="journal-body">Visited the Tarsier sanctuary, and it was fascinating to see the tiny primates. They are so delicate. Afterwards, we had a wonderful lunch on the Loboc River floating restaurant. The food was great, and the scenery was breathtaking. A truly memorable day.</p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">Day 4: Company Visits</h3>
+                <p class="journal-date">March 18, 2024</p>
+                <p class="journal-body">Today was all about learning. We visited several IT companies like Dynata and Mata Technologies. It was inspiring to see the real-world applications of what we're studying and to hear from professionals in the field. It gave us a lot of insight into potential career paths.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section id="posts-grid" class="posts-grid">
+        <div class="posts-grid-container">
+            <div class="grid-post" data-image="EDUTOUR PICS/UP.jpg" data-caption="Educational Tour UP Experience." data-date="March 14, 2024">
+                <img src="EDUTOUR PICS/UP.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 1,234</span>
+                        <span><i class="fas fa-comment"></i> 89</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/lapu-lapu.jpg" data-caption="Educational Tour LAPU-LAPU Experience." data-date="March 16, 2024">
+                <img src="EDUTOUR PICS/lapu-lapu.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 987</span>
+                        <span><i class="fas fa-comment"></i> 67</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Dynata.jpeg" data-caption="Educational Tour DYNATA PHILIPPINES Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Dynata.jpeg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/MATA.jpg" data-caption="Educational Tour MATA TECHNOLOGIES" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/MATA.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Rivan IT.jpeg" data-caption="Educational Tour Rivan IT Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Rivan IT.jpeg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/hills.jpg" data-caption="BOHOL CHOCOLATE HILLS Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/hills.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Tarsier.jpg" data-caption="Tarsier - TELEPHONE AND RADIO SYSTEM INTEGRATED EMERGENCY RESPONSE Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Tarsier.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Church CEBU.jpg" data-caption="Santo Niño: Hope of the Pilgrim Church Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Church CEBU.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Bangka.jpg" data-caption="LOBOC RIVER FLOATING RESTAURANT BOHOL Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Bangka.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/Tarser.jpeg" data-caption="TARSIER IN BOHOL CITY Experience" data-date="March 17, 2024">
+                <img src="EDUTOUR PICS/Tarser.jpeg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+             <div class="grid-post" data-video="EDUTOUR PICS/Air.mp4" data-caption="First Airplane Experience" data-date="March 17, 2024">
+                <video src="EDUTOUR PICS/Air.mp4" muted autoplay loop poster="EDUTOUR PICS/Air.mp4"></video>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+             <div class="grid-post" data-video="EDUTOUR PICS/Bohollywood.mp4" data-caption="BOHOLLYWOOD Experience" data-date="March 17, 2024">
+                <video src="EDUTOUR PICS/Bohollywood.mp4" muted autoplay loop poster="EDUTOUR PICS/Bohollywood.mp4"></video>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saved Section -->
+    <section id="saved-grid" class="posts-grid">
+        <div class="posts-grid-container">
+            <div class="grid-post" data-image="EDUTOUR PICS/CertCompletion.jpg" data-caption="Saved Memory - A beautiful moment and the completion of this Educational Tour." data-date="March 10, 2024">
+                <img src="EDUTOUR PICS/CertCompletion.jpg"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 543</span>
+                        <span><i class="fas fa-comment"></i> 23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div id="modal-media"></div>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-header">
+                        <div class="modal-user">
+                            <img src="NABS.jpeg" alt="Noel Jr. B. Navarro" class="modal-avatar">
+                            <div class="modal-user-info">
+                                <span class="modal-username">noeljrbnavarro</span>
+                                <span class="modal-date" id="modal-date"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-caption">
+                        <p id="modal-caption"></p>
+                    </div>
+                    <div class="modal-stats">
+                        <div class="modal-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="far fa-comment"></i></button>
+                            <button class="action-btn"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div class="modal-likes">
+                            <span id="modal-likes">1,234 likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.classList.add(currentTheme + '-mode');
+
+        // Update button icon based on current theme
+        updateButtonIcon();
+
+        darkModeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            }
+            updateButtonIcon();
+        });
+
+        function updateButtonIcon() {
+            const icon = darkModeToggle.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+
+        // Tab navigation functionality
+        const navTabs = document.querySelectorAll('.nav-tab');
+        const gridSections = document.querySelectorAll('.posts-grid');
+
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                navTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Hide all grid sections
+                gridSections.forEach(section => section.classList.remove('active'));
+
+                // Show corresponding grid section
+                const tabText = tab.querySelector('span').textContent.toLowerCase();
+                const targetSection = document.getElementById(tabText + '-grid');
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('image-modal');
+        const modalMedia = document.getElementById('modal-media');
+        const modalCaption = document.getElementById('modal-caption');
+        const modalDate = document.getElementById('modal-date');
+        const modalLikes = document.getElementById('modal-likes');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Add click event to all grid posts
+        const gridPosts = document.querySelectorAll('.grid-post');
+        gridPosts.forEach(post => {
+            post.addEventListener('click', () => {
+                const videoSrc = post.getAttribute('data-video');
+                const imageSrc = post.getAttribute('data-image');
+                const note = post.getAttribute('data-note');
+                const caption = post.getAttribute('data-caption');
+                const date = post.getAttribute('data-date');
+                const likes = post.querySelector('.overlay-stats span:first-child').textContent.trim();
+
+                // Clear previous media
+                modalMedia.innerHTML = '';
+
+                // Populate modal based on media type
+                if (note === 'true') {
+                    const noteDiv = document.createElement('div');
+                    noteDiv.className = 'note-display';
+                    noteDiv.innerHTML = `<p>${caption}</p>`;
+                    modalMedia.appendChild(noteDiv);
+                } else if (videoSrc) {
+                    const video = document.createElement('video');
+                    video.src = videoSrc;
+                    video.controls = true;
+                    video.style.width = '100%';
+                    video.style.height = 'auto';
+                    modalMedia.appendChild(video);
+                } else if (imageSrc) {
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.alt = 'Post Image';
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                    modalMedia.appendChild(img);
+                }
+
+                modalCaption.textContent = caption;
+                modalDate.textContent = date;
+                modalLikes.textContent = likes;
+
+                // Show modal
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Close modal functions
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
