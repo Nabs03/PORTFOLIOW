@@ -8,7 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|mp4|webm|ogg))",
+      "src": "/styles.css",
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/script.js"
+    },
+    {
+      "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|mp4|webm|ogg))",
       "dest": "/$1"
     },
     {
