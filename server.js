@@ -2,9 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
-const fs = require('fs');
-const { google } = require('googleapis');
-require('dotenv').config();
 
 const app = express();
 
@@ -13,64 +10,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
-
-// File-based database (JSON file)
-const dbFile = path.join(__dirname, 'contacts.json');
-
-// Initialize contacts database file if it doesn't exist
-if (!fs.existsSync(dbFile)) {
-    fs.writeFileSync(dbFile, JSON.stringify([], null, 2));
-    console.log('✓ Contacts database initialized');
-}
-
-// Google Drive API setup
-const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
-const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
-const REDIRECT_URI = process.env.GOOGLE_REDIRECT_URI || 'http://localhost:3000/auth/google/callback';
-
-const oauth2Client = new google.auth.OAuth2(
-    CLIENT_ID,
-    CLIENT_SECRET,
-    REDIRECT_URI
-);
-
-// Scopes for Google Drive access
-const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
-
-// Token storage file
-const TOKEN_PATH = path.join(__dirname, 'token.json');
-
-// Helper function to save tokens
-function saveTokens(tokens) {
-    fs.writeFileSync(TOKEN_PATH, JSON.stringify(tokens, null, 2));
-}
-
-// Helper function to load tokens
-function loadTokens() {
-    try {
-        const tokens = fs.readFileSync(TOKEN_PATH, 'utf8');
-        return JSON.parse(tokens);
-    } catch (error) {
-        return null;
-    }
-}
-
-// Load existing tokens if available
-const existingTokens = loadTokens();
-if (existingTokens) {
-    oauth2Client.setCredentials(existingTokens);
-}
-
-// Helper function to read contacts from file
-function readContacts() {
-    const data = fs.readFileSync(dbFile, 'utf8');
-    return JSON.parse(data);
-}
-
-// Helper function to write contacts to file
-function writeContacts(contacts) {
-    fs.writeFileSync(dbFile, JSON.stringify(contacts, null, 2));
-}
 
 // Routes
 
@@ -88,31 +27,23 @@ app.get('/EDUTOUR PICS/:filename', (req, res) => {
     const filename = req.params.filename;
     const filePath = path.join(__dirname, 'EDUTOUR PICS', filename);
 
-    // Check if file exists
-    if (fs.existsSync(filePath)) {
-        // Set appropriate content type based on file extension
-        const ext = path.extname(filename).toLowerCase();
-        if (ext === '.jpg' || ext === '.jpeg') {
-            res.setHeader('Content-Type', 'image/jpeg');
-        } else if (ext === '.png') {
-            res.setHeader('Content-Type', 'image/png');
-        } else if (ext === '.gif') {
-            res.setHeader('Content-Type', 'image/gif');
-        } else if (ext === '.mp4') {
-            res.setHeader('Content-Type', 'video/mp4');
-        } else if (ext === '.webm') {
-            res.setHeader('Content-Type', 'video/webm');
-        } else if (ext === '.ogg') {
-            res.setHeader('Content-Type', 'video/ogg');
-        }
-
-        res.sendFile(filePath);
-    } else {
-        res.status(404).json({
-            success: false,
-            message: 'File not found'
-        });
+    // Set appropriate content type based on file extension
+    const ext = path.extname(filename).toLowerCase();
+    if (ext === '.jpg' || ext === '.jpeg') {
+        res.setHeader('Content-Type', 'image/jpeg');
+    } else if (ext === '.png') {
+        res.setHeader('Content-Type', 'image/png');
+    } else if (ext === '.gif') {
+        res.setHeader('Content-Type', 'image/gif');
+    } else if (ext === '.mp4') {
+        res.setHeader('Content-Type', 'video/mp4');
+    } else if (ext === '.webm') {
+        res.setHeader('Content-Type', 'video/webm');
+    } else if (ext === '.ogg') {
+        res.setHeader('Content-Type', 'video/ogg');
     }
+
+    res.sendFile(filePath);
 });
 
 // GET - Serve specific static files (wp.jpg, NABS.jpeg)

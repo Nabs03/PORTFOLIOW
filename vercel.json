@@ -8,30 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/styles.css",
-      "dest": "/styles.css"
-    },
-    {
-      "src": "/script.js",
-      "dest": "/script.js"
-    },
-    {
-      "src": "/wp.jpg",
-      "dest": "/wp.jpg"
-    },
-    {
-      "src": "/NABS.jpeg",
-      "dest": "/NABS.jpeg"
-    },
-    {
-      "src": "/EDUTOUR PICS/(.*)",
-      "dest": "/EDUTOUR PICS/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/server.js"
     }
