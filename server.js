@@ -83,6 +83,47 @@ app.get('/script.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'script.js'));
 });
 
+// GET - Serve images and videos from EDUTOUR PICS directory
+app.get('/EDUTOUR PICS/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(__dirname, 'EDUTOUR PICS', filename);
+
+    // Check if file exists
+    if (fs.existsSync(filePath)) {
+        // Set appropriate content type based on file extension
+        const ext = path.extname(filename).toLowerCase();
+        if (ext === '.jpg' || ext === '.jpeg') {
+            res.setHeader('Content-Type', 'image/jpeg');
+        } else if (ext === '.png') {
+            res.setHeader('Content-Type', 'image/png');
+        } else if (ext === '.gif') {
+            res.setHeader('Content-Type', 'image/gif');
+        } else if (ext === '.mp4') {
+            res.setHeader('Content-Type', 'video/mp4');
+        } else if (ext === '.webm') {
+            res.setHeader('Content-Type', 'video/webm');
+        } else if (ext === '.ogg') {
+            res.setHeader('Content-Type', 'video/ogg');
+        }
+
+        res.sendFile(filePath);
+    } else {
+        res.status(404).json({
+            success: false,
+            message: 'File not found'
+        });
+    }
+});
+
+// GET - Serve specific static files (wp.jpg, NABS.jpeg)
+app.get('/wp.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'wp.jpg'));
+});
+
+app.get('/NABS.jpeg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'NABS.jpeg'));
+});
+
 // GET - Serve main portfolio page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
