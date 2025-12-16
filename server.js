@@ -74,6 +74,15 @@ function writeContacts(contacts) {
 
 // Routes
 
+// GET - Serve static files explicitly
+app.get('/styles.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'styles.css'));
+});
+
+app.get('/script.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'script.js'));
+});
+
 // GET - Serve main portfolio page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
