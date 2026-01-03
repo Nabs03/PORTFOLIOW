@@ -1,5 +1,4 @@
-# TODO: Transform Website to Instagram-like Profile and Timeline
+# TODO: Update Profile Name Styling
 
-- [x] Update index.html: Add Instagram profile section with avatar, username, stats, bio, navigation tabs, and posts grid.
-- [x] Update styles.css: Apply Instagram color scheme and layout styles for profile and grid.
-- [x] Test the layout in browser.
+- [x] Add Google Fonts import for Noto Serif in styles.css
+- [x] Update .profile-name class to use Noto Serif, bold, uppercase, and remove italic

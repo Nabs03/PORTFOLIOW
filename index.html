@@ -8,21 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dark-mode">
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-left">
-                <a href="#home" title="Home">
-                    <img src="wp.jpg" alt="WP Logo" class="nav-logo-img" />
-                </a>
-                <div class="nav-brand logo-wp">Website Portfolio</div>
-            </div>
-            <button class="hamburger" type="button" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
     <section id="profile" class="profile">
         <div class="profile-container">
             <div class="profile-header">
@@ -33,7 +18,7 @@
                     <div class="profile-bio">
                         <div class="profile-name">Noel Jr. B. Navarro</div>
                         <div class="profile-subtitle">BSIT STUDENT FROM HOLY CROSS OF DAVAO COLLEGE</div>
-                        <p>Welcome to my profile! This is my personal portfolio where I share my Diary and Experiences during our Educational Tour in Cebu City and Bohol City!</p>
+                        <p>Welcome! This is my personal portfolio!</p>
                     </div>
                 </div>
             </div>
@@ -50,9 +35,13 @@
                 <i class="fas fa-tv"></i>
                 <span>POSTS</span>
             </button>
-            <button class="nav-tab" data-target="saved-grid" type="button">
+            <button class="nav-tab" data-target="certification-grid" type="button">
                 <i class="fas fa-bookmark"></i>
-                <span>SAVED</span>
+                <span>CERTIFICATIONS</span>
+            </button>
+            <button class="nav-tab" data-target="about-grid" type="button">
+                <i class="fas fa-user"></i>
+                <span>ABOUT</span>
             </button>
         </div>
     </section>
@@ -152,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-post" data-image="EDUTOUR PICS/Manmade.jpeg"data-caption="BILAR MAN-MADE FOREST Experience" data-date="November 15, 2025">
+            <div class="grid-post" data-image="EDUTOUR PICS/Manmade.jpeg" data-caption="BILAR MAN-MADE FOREST Experience" data-date="November 15, 2025">
                 <img src="EDUTOUR PICS/Manmade.jpeg" alt="BILAR MAN-MADE FOREST Experience" loading="lazy"/>
                 <div class="grid-post-overlay">
                     <div class="overlay-stats">
@@ -161,8 +150,17 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-post" data-image="EDUTOUR PICS/hills.jpg"data-caption="BOHOL CHOCOLATE HILLS Experience" data-date="November 15, 2025">
+            <div class="grid-post" data-image="EDUTOUR PICS/hills.jpg" data-caption="BOHOL CHOCOLATE HILLS Experience" data-date="November 15, 2025">
                 <img src="EDUTOUR PICS/hills.jpg" alt="BOHOL CHOCOLATE HILLS Experience" loading="lazy"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 756</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/choco.jpeg" data-caption="BOHOL CHOCOLATE HILLS Experience" data-date="November 15, 2025">
+                <img src="EDUTOUR PICS/choco.jpeg" alt="BOHOL CHOCOLATE HILLS Experience" loading="lazy"/>
                 <div class="grid-post-overlay">
                     <div class="overlay-stats">
                         <span><i class="fas fa-heart"></i> 756</span>
@@ -197,7 +195,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-post" data-image="EDUTOUR PICS/Tarser.jpeg"data-caption="TARSIER IN BOHOL CITY Experience" data-date="November 15, 2025">
+            <div class="grid-post" data-image="EDUTOUR PICS/Tarser.jpeg" data-caption="TARSIER IN BOHOL CITY Experience" data-date="November 15, 2025">
                 <img src="EDUTOUR PICS/Tarser.jpeg" alt="TARSIER IN BOHOL CITY Experience" loading="lazy"/>
                 <div class="grid-post-overlay">
                     <div class="overlay-stats">
@@ -227,17 +225,58 @@
         </div>
     </section>
 
-    <!-- Saved Section -->
-    <section id="saved-grid" class="posts-grid">
+    <!-- Certification Section -->
+    <section id="certification-grid" class="posts-grid">
         <div class="posts-grid-container">
-            <div class="grid-post" data-image="EDUTOUR PICS/CertCompletion.jpg" data-caption="Saved Memory - A beautiful moment and the completion of this Educational Tour." data-date="December 2025">
-                <img src="EDUTOUR PICS/CertCompletion.jpg" alt="Saved Memory - A beautiful moment and the completion of this Educational Tour." loading="lazy"/>
+            <div class="grid-post" data-image="EDUTOUR PICS/NavarroNoel-CERT.pdf.jpg" data-caption="Certification" data-date="MAY 2025">
+                <img src="EDUTOUR PICS/NavarroNoel-CERT.pdf.jpg" alt="Certification." loading="lazy"/>
                 <div class="grid-post-overlay">
                     <div class="overlay-stats">
                         <span><i class="fas fa-heart"></i> 543</span>
                         <span><i class="fas fa-comment"></i> 23</span>
                     </div>
                 </div>
+            </div>
+            <div class="grid-post" data-image="EDUTOUR PICS/CertCompletion.jpg" data-caption="Certification" data-date="December 2025">
+                <img src="EDUTOUR PICS/CertCompletion.jpg" alt="Certification." loading="lazy"/>
+                <div class="grid-post-overlay">
+                    <div class="overlay-stats">
+                        <span><i class="fas fa-heart"></i> 543</span>
+                        <span><i class="fas fa-comment"></i> 23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-grid" class="posts-grid">
+        <div class="journal-container">
+            <div class="journal-entry">
+                <h3 class="journal-title">About Me</h3>
+                <p class="journal-body">Hello! I'm Noel Jr. B. Navarro, a 3rd year BSIT student at Holy Cross of Davao College. My journey in Information Technology has been filled with curiosity and a drive to learn about the digital world.</p>
+                <p class="journal-body">I specialize in web development, software engineering, and exploring emerging technologies. This portfolio showcases my experiences, projects, and growth throughout my educational journey.</p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">Skills</h3>
+                <p class="journal-body">• Web Development (HTML, CSS, JavaScript)</p>
+                <p class="journal-body">• Database Management</p>
+                <p class="journal-body">• UI/UX Design</p>
+            </div>
+             <div class="journal-entry">
+                <h3 class="journal-title">Projects</h3>
+                <p class="journal-body">Here you can view all my Projects.</p>
+                <p class="journal-body"><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Nabs03" target="_blank">https://github.com/Nabs03</a></p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">My Goals</h3>
+                <p class="journal-body">My goal is to become a skilled software engineer who can create innovative solutions that make a positive impact on society. I believe in continuous learning and adapting to new technologies.</p>
+                <p class="journal-body">Through experiences like the educational tour documented in this portfolio, I aim to broaden my perspectives and apply real-world insights to my academic and professional pursuits.</p>
+            </div>
+            <div class="journal-entry">
+                <h3 class="journal-title">Contact Information</h3>
+                <p class="journal-body"><i class="fas fa-envelope"></i> Email: <a href="mailto:noel.navarro@hcdc.edu.ph">noel.navarro@hcdc.edu.ph</a></p>
+                <p class="journal-body"><i class="fas fa-phone"></i> Phone: <a href="tel:+639672312874">+639672312874</a></p>
             </div>
         </div>
     </section>

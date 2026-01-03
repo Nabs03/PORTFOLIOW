@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
 :root {
     --primary-color: #E4405F;
     --secondary-color: #F77737;
@@ -252,9 +254,49 @@ body {
 
 /* Profile Section */
 .profile {
-    background: var(--bg-white);
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
     border-bottom: 1px solid var(--border-color);
     padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(228, 5, 95, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(247, 119, 55, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(250, 202, 69, 0.08) 0%, transparent 40%),
+        linear-gradient(45deg, transparent 49%, rgba(228, 5, 95, 0.05) 49%, rgba(228, 5, 95, 0.05) 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(247, 119, 55, 0.05) 49%, rgba(247, 119, 55, 0.05) 51%, transparent 51%);
+    background-size: 200px 200px, 150px 150px, 100px 100px, 50px 50px, 50px 50px;
+    background-position: 0% 0%, 100% 100%, 50% 50%, 20% 30%, 80% 70%;
+    animation: portfolioFloat 25s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes portfolioFloat {
+    0%, 100% {
+        background-position: 0% 0%, 100% 100%, 50% 50%, 20% 30%, 80% 70%;
+        opacity: 0.6;
+    }
+    25% {
+        background-position: 10% 10%, 90% 90%, 60% 40%, 30% 40%, 70% 60%;
+        opacity: 0.8;
+    }
+    50% {
+        background-position: 20% 20%, 80% 80%, 40% 60%, 40% 50%, 60% 50%;
+        opacity: 0.6;
+    }
+    75% {
+        background-position: 10% 10%, 90% 90%, 60% 40%, 30% 40%, 70% 60%;
+        opacity: 0.8;
+    }
 }
 
 .profile-container {
@@ -353,7 +395,9 @@ body {
 }
 
 .profile-name {
-    font-weight: 600;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    text-transform: uppercase;
     color: var(--text-dark);
     margin-bottom: 5px;
 }
@@ -1106,7 +1150,7 @@ section {
 }
 
 .dark-mode .profile {
-    background: var(--bg-light);
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-gray) 100%);
     border-bottom: 1px solid var(--border-color);
 }
 
